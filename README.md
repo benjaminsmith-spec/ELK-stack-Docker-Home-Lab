@@ -115,6 +115,13 @@ ELK-stack-Docker-Home-Lab/
 └── labs/
     ├── 00-elk-setup/
     │   └── README.md
+    ├── elasticsearch/
+    │   └── elasticsearch.yml
+    ├── kibana/
+    │   └── kibana.yml
+    ├── logstash/
+    │   ├── logstash.conf
+    │   └── pipelines.yml
     ├── 00.1-victim-server/
     │   ├── README.md
     │   ├── Dockerfile
@@ -144,4 +151,5 @@ ELK-stack-Docker-Home-Lab/
 
 ## Acknowledgments
 
-Core ELK setup based on the tutorial [Setting Up ELK SIEM in Docker from A to Z](https://medium.com/@sundaeGAN/setting-up-elk-siem-in-docker-from-a-to-z-e765d8e3b96f) by sundaeGAN, with additional enhancements for security enablement, alerting, modular lab structure, and reproducibility.
+Core ELK setup based on the tutorial [Setting Up ELK SIEM in Docker from A to Z](https://medium.com/@sundaeGAN/setting-up-elk-siem-in-docker-from-a-to-z-e765d8e3b96f) by sundaeGAN, with additional enhancements for security enablement, alerting, modular lab structure, and reproducibility. 
+Claude.ai LLM as used to rough out most of the documentation for these labs. 
