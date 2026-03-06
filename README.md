@@ -16,10 +16,10 @@ The ELK Stack is a collection of three open-source tools from Elastic that toget
 
 ```mermaid
 flowchart LR
-    B["📦 Beats\nLightweight agents that\ncollect and ship raw logs\nfrom endpoints"]
-    L["⚙️ Logstash\nProcesses, filters, and\nenriches logs before\nforwarding them"]
-    E["🗄️ Elasticsearch\nStores, indexes, and\nanalyzes log data\nat scale"]
-    K["📊 Kibana\nVisual dashboard for\nexploring logs, building\nalerts, and investigation"]
+    B["📦 Beats Lightweight agents that\ncollect and ship raw logs\nfrom endpoints"]
+    L["⚙️ Logstash Processes, filters, and\nenriches logs before\nforwarding them"]
+    E["🗄️ Elasticsearch Stores, indexes, and\nanalyzes log data\nat scale"]
+    K["📊 Kibana Visual dashboard for\nexploring logs, building\nalerts, and investigation"]
 
     B -->|"Raw logs"| L
     L -->|"Processed logs"| E
@@ -42,25 +42,25 @@ flowchart LR
 flowchart TB
     subgraph core["Core ELK Infrastructure (Docker Network)"]
         direction LR
-        ES["🟢 Elasticsearch\nPort 9200"]
-        LS["🟡 Logstash\nPort 5044"]
-        KB["🔵 Kibana\nPort 5601"]
+        ES["🟢 Elasticsearch Port 9200"]
+        LS["🟡 Logstash Port 5044"]
+        KB["🔵 Kibana Port 5601"]
         LS -->|"Indexes logs"| ES
         ES -->|"Queries"| KB
     end
 
     subgraph agents["Endpoints & Agents"]
         direction LR
-        V1["🟠 Victim Server\nFilebeat"]
-        V2["🟠 Additional\nEndpoints"]
+        V1["🟠 Victim Server with Filebeat agent"]
+        V2["🟠 Additional Endpoints"]
     end
 
     subgraph attacks["Attack Simulations"]
         direction LR
-        A1["🔴 Attacker\nContainers / VMs"]
+        A1["🔴 Attacker Containers / VMs"]
     end
 
-    A1 -->|"Simulated\nattacks"| agents
+    A1 -->|"Simulated attacks"| agents
     agents -->|"Ship logs"| LS
 ```
 
