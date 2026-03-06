@@ -105,13 +105,6 @@ This repository is organized into separate lab modules. Start with the infrastru
 ```
 ELK-stack-Docker-Home-Lab/
 ├── README.md                          ← You are here
-├── elasticsearch/
-│   └── elasticsearch.yml
-├── kibana/
-│   └── kibana.yml
-├── logstash/
-│   ├── logstash.conf
-│   └── pipelines.yml
 └── labs/
     ├── 00-elk-setup/
     │   └── README.md
