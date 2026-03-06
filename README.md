@@ -54,10 +54,12 @@ You should see `elastic` in the list.
 
 ## Step 2 — Deploy Elasticsearch
 
-### 2.1 Pull the Image
+### 2.1 Pull the Image 
+
+> **Note:** At the time of this labs creation the latest release of Elasticsearch, Logstash, and Kibana is v9.3.1. Check for latest versions before pulling images. 
 
 ```bash
-docker pull docker.elastic.co/elasticsearch/elasticsearch:9.2.3
+docker pull docker.elastic.co/elasticsearch/elasticsearch:9.3.1
 ```
 
 ### 2.2 Create the Configuration File
@@ -87,7 +89,7 @@ Run this command from the directory where you created `elasticsearch.yml`:
 ```bash
 docker run --name es01 --net elastic -p 9200:9200 -it -m 1GB \
   -v ${PWD}/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml \
-  docker.elastic.co/elasticsearch/elasticsearch:9.2.3
+  docker.elastic.co/elasticsearch/elasticsearch:9.3.1
 ```
 
 **What this does:**
@@ -131,7 +133,7 @@ You should receive a JSON response containing the cluster name and version info.
 ### 3.1 Pull the Image
 
 ```bash
-docker pull docker.elastic.co/kibana/kibana:9.2.3
+docker pull docker.elastic.co/kibana/kibana:9.3.1
 ```
 
 ### 3.2 Create the Configuration File
@@ -178,7 +180,7 @@ openssl rand -base64 32
 ```bash
 docker run --name kib01 --net elastic -p 5601:5601 \
   -v ${PWD}/kibana.yml:/usr/share/kibana/config/kibana.yml \
-  docker.elastic.co/kibana/kibana:9.2.3
+  docker.elastic.co/kibana/kibana:9.3.1
 ```
 
 ### 3.4 Access Kibana
@@ -197,7 +199,7 @@ It may take a minute or two for Kibana to fully initialize on first launch.
 ### 4.1 Pull the Image
 
 ```bash
-docker pull docker.elastic.co/logstash/logstash:9.2.3
+docker pull docker.elastic.co/logstash/logstash:9.3.1
 ```
 
 ### 4.2 Create the Pipeline Configuration
@@ -248,7 +250,7 @@ Create `pipelines.yml` to tell Logstash which config to use:
 docker run --name logstash --net elastic -p 5044:5044 \
   -v ${PWD}/logstash.conf:/usr/share/logstash/pipeline/logstash.conf \
   -v ${PWD}/pipelines.yml:/usr/share/logstash/config/pipelines.yml \
-  docker.elastic.co/logstash/logstash:9.2.3
+  docker.elastic.co/logstash/logstash:9.3.1
 ```
 
 Logstash takes a minute or two to start. Watch the logs for a line indicating the pipeline has started and the Beats input is listening on port 5044.
@@ -325,4 +327,3 @@ The core stack is now ready to receive logs. Continue to:
 
 → [Lab 00.1 — Building the Victim Server](../00.1-victim-server/) to set up a monitored endpoint with Filebeat
 
-→ [Lab 01 — SSH Brute Force](../01-ssh-bruteforce/) to simulate and detect your first attack
