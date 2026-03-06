@@ -16,10 +16,10 @@ The ELK Stack is a collection of three open-source tools from Elastic that toget
 
 ```mermaid
 flowchart LR
-    B["📦 Beats Lightweight agents that\ncollect and ship raw logs\nfrom endpoints"]
-    L["⚙️ Logstash Processes, filters, and\nenriches logs before\nforwarding them"]
-    E["🗄️ Elasticsearch Stores, indexes, and\nanalyzes log data\nat scale"]
-    K["📊 Kibana Visual dashboard for\nexploring logs, building\nalerts, and investigation"]
+    B["📦 Beats are Lightweight agents that collect and ship raw logs from endpoints"]
+    L["⚙️ Logstash Processes, filters, and enriches logs before forwarding them"]
+    E["🗄️ Elasticsearch Stores, indexes, and analyzes log data at scale"]
+    K["📊 Kibana Visual dashboard for exploring logs, building alerts, and investigation"]
 
     B -->|"Raw logs"| L
     L -->|"Processed logs"| E
@@ -77,6 +77,7 @@ This repository is organized into separate lab modules. Start with the infrastru
 | Lab | Description | Difficulty |
 |---|---|---|---|
 | [Lab 00 — Building the ELK Stack](labs/00-elk-setup/) | Deploy Elasticsearch, Logstash, and Kibana in Docker with security enabled | Beginner |
+
 | [Lab 00.1 — Building the Victim Server](labs/00.1-victim-server/) | Build an Ubuntu container with Filebeat, rsyslog, and OpenSSH as a monitored endpoint | Beginner |
 
 ### Attack Scenarios
@@ -84,10 +85,15 @@ This repository is organized into separate lab modules. Start with the infrastru
 | Lab | Attack Type | Difficulty |
 |---|---|---|---|
 | [Lab 01 — SSH Brute Force](labs/01-ssh-bruteforce/) | Detect brute-force login attempts using Hydra and Kibana detection rules | Beginner |
+
 | [Lab 02 — Web Server Attack](labs/02-web-attack/) | Detect SQL injection and directory traversal against a web server | Intermediate |
+
 | [Lab 03 — Privilege Escalation](labs/03-priv-escalation/) | Detect suspicious privilege escalation activity on a Linux host | Intermediate |
+
 | [Lab 04 — Reverse Shell / C2 Beacon](labs/04-reverse-shell/) | Detect outbound reverse shell connections and command-and-control traffic | Advanced |
+
 | [Lab 05 — DNS Exfiltration](labs/05-dns-exfiltration/) | Detect data exfiltration through encoded DNS queries | Advanced |
+
 > Each lab contains its own README with setup instructions, attack steps, detection rules, and expected results.
 
 ---
