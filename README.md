@@ -19,7 +19,7 @@ flowchart LR
     B["📦 Beats are Lightweight agents that collect and ship raw logs from endpoints"]
     L["⚙️ Logstash Processes, filters, and enriches logs before forwarding them"]
     E["🗄️ Elasticsearch Stores, indexes, and analyzes log data at scale"]
-    K["📊 Kibana Visual dashboard for exploring logs, building alerts, and investigation"]
+    K["📊 Kibana's Visual dashboard is used for exploring logs, building alerts, and investigation"]
 
     B -->|"Raw logs"| L
     L -->|"Processed logs"| E
