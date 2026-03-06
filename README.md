@@ -75,7 +75,8 @@ This repository is organized into separate lab modules. Start with the infrastru
 ### Infrastructure
 
 | Lab | Description | Difficulty |
-|---|---|---|---|
+|---|---|---|
+
 | [Lab 00 — Building the ELK Stack](labs/00-elk-setup/) | Deploy Elasticsearch, Logstash, and Kibana in Docker with security enabled | Beginner |
 
 | [Lab 00.1 — Building the Victim Server](labs/00.1-victim-server/) | Build an Ubuntu container with Filebeat, rsyslog, and OpenSSH as a monitored endpoint | Beginner |
@@ -83,7 +84,8 @@ This repository is organized into separate lab modules. Start with the infrastru
 ### Attack Scenarios
 
 | Lab | Attack Type | Difficulty |
-|---|---|---|---|
+|---|---|---|
+
 | [Lab 01 — SSH Brute Force](labs/01-ssh-bruteforce/) | Detect brute-force login attempts using Hydra and Kibana detection rules | Beginner |
 
 | [Lab 02 — Web Server Attack](labs/02-web-attack/) | Detect SQL injection and directory traversal against a web server | Intermediate |
