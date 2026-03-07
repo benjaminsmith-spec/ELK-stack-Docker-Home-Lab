@@ -67,7 +67,9 @@ docker pull docker.elastic.co/elasticsearch/elasticsearch:9.3.1
 
 ### 2.2 Create the Configuration File
 
-Create a folder on your host for Elasticsearch config files, then create `elasticsearch.yml` inside it:
+Create a folder on your host in your directory of choice for the Elasticsearch config files, then create `elasticsearch.yml` inside it
+It is important to rmember that these cannot be .txt files and must be .yml 
+please refer to figures 2.0-2.6:
 
 ```yaml
 # Cluster name
@@ -87,7 +89,7 @@ xpack.security.enabled: true
 
 ### 2.3 Run the Container
 
-Run this command from the directory where you created `elasticsearch.yml`:
+In Powershell, navigate to the directory where you created `elasticsearch.yml` and run the commands below:
 
 ```bash
 docker run --name es01 --net elastic -p 9200:9200 -it -m 1GB \
