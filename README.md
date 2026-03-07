@@ -29,8 +29,11 @@ By the end of this lab you will have three containers running on a shared Docker
 ## Prerequisites
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running
+      - This is your Containerization Engine that will allocate resouces and isolate the containers from your host
+  > **Note:** Docker desktop requires you install [WSL](https://learn.microsoft.com/en-us/windows/wsl/install), and requires Virtualization features be enabled on the host
 - At least **4 GB of RAM** allocated to Docker
 - PowerShell (Windows) or Terminal (macOS/Linux)
+      - This is the interface where you will primarily interact with the Docker Engine and your containers 
 
 ---
 
