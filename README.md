@@ -53,7 +53,7 @@ docker network ls
 
 You should see `elastic` in the list.
 
-Figure 1.0
+> **Figure1.0:** Creating and verifiying the 'elastic' Docker network
 <img width="1482" height="762" alt="00-1 0" src="https://github.com/user-attachments/assets/707dc41d-285a-4b6c-8906-fba6e6b0b214" />
 
 ---
@@ -74,22 +74,22 @@ Create a folder on your host in your directory of choice for the Elasticsearch c
 It is important to rmember that these cannot be .txt files and must be .yml 
 please refer to figures 2.0-2.7:
 
-> **Figure 2.0:** Creating ELK folder
+> **Figure 2.0:** Creating a new folder and naming it 'ELK'
 <img width="1920" height="1140" alt="00-1 1" src="https://github.com/user-attachments/assets/512d071f-a3b8-4202-bd86-6ccdefbbe5a6" />
 
-> **Figure2.1:** View settings changed to show file extention names
+> **Figure2.1:** Changing the View settings to show file name extentions 
 <img width="1920" height="1140" alt="00-2 1" src="https://github.com/user-attachments/assets/fb227e82-d415-4a56-b8bb-3b3552d9ec0e" />
 
 > **Figure2.2:** Creating a new text document
 <img width="1920" height="1140" alt="00-2 2" src="https://github.com/user-attachments/assets/5785319a-1cfd-47e9-98ee-c0ef041b39bf" />
 
-> **Figure2.3:** Naming 'elasticsearch.yml' 
+> **Figure2.3:** Naming the document 'elasticsearch.yml' 
 <img width="1920" height="1140" alt="00-2 3" src="https://github.com/user-attachments/assets/83cc71f5-c7e2-499e-9a44-1c3164cd5282" />
 
-> **Figure2.4:** Confirm change to .yml file type
+> **Figure2.4:** Selecting 'Yes' to confirm change from .txt to .yml file type
 <img width="548" height="188" alt="00-2 4" src="https://github.com/user-attachments/assets/6459447e-c429-4589-a2ce-6176c575ab52" />
 
-> **Figure2.5:** Open 'elasticsearch.yml' with notepad
+> **Figure2.5:** Opening 'elasticsearch.yml' with notepad
 <img width="559" height="636" alt="00-2 5" src="https://github.com/user-attachments/assets/4d3da0bb-0acf-4051-8006-5068c69c9f14" />
 
 Copy the YAML configuraiton below and paste it into 'elasticsearch.yml' and save:
