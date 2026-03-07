@@ -72,24 +72,24 @@ docker pull docker.elastic.co/elasticsearch/elasticsearch:9.3.1
 
 Create a folder on your host in your directory of choice for the Elasticsearch config files, then create `elasticsearch.yml` inside it
 It is important to rmember that these cannot be .txt files and must be .yml 
-please refer to figures 2.0-2.7:
+please refer to figures 2.2.0-2.2.7:
 
-> **Figure 2.0:** Creating a new folder and naming it 'ELK'
+> **Figure 2.2.0:** Creating a new folder and naming it 'ELK'
 <img width="1920" height="1140" alt="00-1 1" src="https://github.com/user-attachments/assets/512d071f-a3b8-4202-bd86-6ccdefbbe5a6" />
 
-> **Figure2.1:** Changing the View settings to show file name extentions 
+> **Figure2.2.1:** Changing the View settings to show file name extentions 
 <img width="1920" height="1140" alt="00-2 1" src="https://github.com/user-attachments/assets/fb227e82-d415-4a56-b8bb-3b3552d9ec0e" />
 
-> **Figure2.2:** Creating a new text document
+> **Figure2.2.2:** Creating a new text document
 <img width="1920" height="1140" alt="00-2 2" src="https://github.com/user-attachments/assets/5785319a-1cfd-47e9-98ee-c0ef041b39bf" />
 
-> **Figure2.3:** Naming the document 'elasticsearch.yml' 
+> **Figure2.2.3:** Naming the document 'elasticsearch.yml' 
 <img width="1920" height="1140" alt="00-2 3" src="https://github.com/user-attachments/assets/83cc71f5-c7e2-499e-9a44-1c3164cd5282" />
 
-> **Figure2.4:** Selecting 'Yes' to confirm change from .txt to .yml file type
+> **Figure2.2.4:** Selecting 'Yes' to confirm change from .txt to .yml file type
 <img width="548" height="188" alt="00-2 4" src="https://github.com/user-attachments/assets/6459447e-c429-4589-a2ce-6176c575ab52" />
 
-> **Figure2.5:** Opening 'elasticsearch.yml' with notepad
+> **Figure2.2.5:** Opening 'elasticsearch.yml' with notepad
 <img width="559" height="636" alt="00-2 5" src="https://github.com/user-attachments/assets/4d3da0bb-0acf-4051-8006-5068c69c9f14" />
 
 Copy the YAML configuraiton below and paste it into 'elasticsearch.yml' and save:
@@ -108,7 +108,7 @@ discovery.type: single-node
 xpack.security.enabled: true
 ```
 
-> **Figure2.6:** Contents of 'elasticsearch.yml'
+> **Figure2.2.6:** Contents of 'elasticsearch.yml'
 <img width="1426" height="818" alt="00-2 6" src="https://github.com/user-attachments/assets/90732870-774a-423f-a821-b782b10fd760" />
 
 > **Note:** The original tutorial sets `xpack.security.enabled: false` for simplicity. We enable it here because Kibana's detection engine and alerting require authentication. If you want to start without security and enable it later, set this to `false` and revisit [Enabling Security](#enabling-security-after-initial-setup) at the end of this lab.
@@ -122,6 +122,8 @@ docker run --name es01 --net elastic -p 9200:9200 -it -m 1GB `
 -v ${PWD}/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml `
 docker.elastic.co/elasticsearch/elasticsearch:9.3.1
 ```
+> **Figure2.3.0:** Folder navigation and command execution
+<img width="1920" height="1140" alt="3 0" src="https://github.com/user-attachments/assets/a5f635c4-4079-4c29-9501-e3f62802348a" />
 
 **What this does:**
 
@@ -143,19 +145,30 @@ docker exec -it es01 /usr/share/elasticsearch/bin/elasticsearch-setup-passwords 
 
 This will prompt you to set passwords for several accounts. **Write these down** — you will need them throughout the lab:
 
+> **NOTE:** For security purposes when entering your passwords, they will not appear as they are typed in the interface 
+
+> **Figure2.4.0:** Setting paswords
+<img width="1920" height="1140" alt="Screenshot 2026-03-07 042423" src="https://github.com/user-attachments/assets/60c7280c-8ec0-4935-9afc-009a1434c2dd" />
+
 | Account | Used By |
 |---|---|
 | `elastic` | Superuser account — used to log into Kibana |
 | `kibana_system` | Kibana's internal connection to Elasticsearch |
 | `logstash_system` | Logstash monitoring (optional) |
 
-### 2.5 Verify Elasticsearch is Running
+### 2.5 Verify Elasticsearch is Running 
+
+> **NOTE:** Ensure to use the password you created for elastic during step 2.4
 
 ```bash
-curl -u elastic:<YOUR_PASSWORD> http://localhost:9200
+curl.exe -u elastic:YOUR_PASSWORD http://localhost:9200
 ```
 
 You should receive a JSON response containing the cluster name and version info.
+
+> **Figure2.5.0:** JSON output
+<img width="1920" height="1140" alt="Screenshot 2026-03-07 045304" src="https://github.com/user-attachments/assets/5ae8daa4-a6c4-493b-8de5-c2afa60a0276" />
+
 
 ---
 
