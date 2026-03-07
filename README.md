@@ -1,4 +1,4 @@
-# ELK Stack Docker Home Lab — SIEM Detection & Alerting
+# Project ELK — SIEM Detection & Alerting
 
 A modular, hands-on home lab for learning security monitoring and threat detection using the Elastic Stack deployed entirely in Docker. Each lab module walks through a different phase of the build — from standing up the core SIEM infrastructure to simulating and detecting real-world attacks.
 
