@@ -118,9 +118,9 @@ xpack.security.enabled: true
 In Powershell, navigate to the directory where you created `elasticsearch.yml` and run the commands below:
 
 ```bash
-docker run --name es01 --net elastic -p 9200:9200 -it -m 1GB \
-  -v ${PWD}/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml \
-  docker.elastic.co/elasticsearch/elasticsearch:9.3.1
+docker run --name es01 --net elastic -p 9200:9200 -it -m 1GB `
+-v ${PWD}/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml `
+docker.elastic.co/elasticsearch/elasticsearch:9.3.1
 ```
 
 **What this does:**
