@@ -291,9 +291,9 @@ Create `pipelines.yml` to tell Logstash which config to use:
 ### 4.4 Run the Container
 
 ```bash
-docker run --name logstash --net elastic -p 5044:5044 \
-  -v ${PWD}/logstash.conf:/usr/share/logstash/pipeline/logstash.conf \
-  -v ${PWD}/pipelines.yml:/usr/share/logstash/config/pipelines.yml \
+docker run --name logstash --net elastic -p 5044:5044 `
+  -v ${PWD}/logstash.conf:/usr/share/logstash/pipeline/logstash.conf `
+  -v ${PWD}/pipelines.yml:/usr/share/logstash/config/pipelines.yml `
   docker.elastic.co/logstash/logstash:9.3.1
 ```
 
