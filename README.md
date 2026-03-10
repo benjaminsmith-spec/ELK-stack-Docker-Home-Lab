@@ -224,7 +224,7 @@ openssl rand -base64 32
 ```bash
 docker run --name kib01 --net elastic -p 5601:5601 `
 -v ${PWD}/kibana.yml:/usr/share/kibana/config/kibana.yml `
-docker.elastic.co/kibana/kibana:9.2.3
+docker.elastic.co/kibana/kibana:9.3.1
 ```
 
 ### 3.4 Access Kibana
