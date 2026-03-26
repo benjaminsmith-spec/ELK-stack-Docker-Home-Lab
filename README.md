@@ -77,7 +77,7 @@ This repository is organized into separate lab modules. Start with the infrastru
 | Lab | Description | Difficulty |
 |---|---|---|
 
-| [Lab 00 — Building the ELK Stack](labs/00-elk-setup/](https://github.com/benjaminsmith-spec/Project-ELK/tree/Lab-00-ELK-Setup) | Deploy Elasticsearch, Logstash, and Kibana in Docker with security enabled | Beginner |
+| [Lab 00 — Building the ELK Stack](https://github.com/benjaminsmith-spec/Project-ELK/tree/Lab-00-ELK-Setup) | Deploy Elasticsearch, Logstash, and Kibana in Docker with security enabled | Beginner |
 
 | [Lab 00.1 — Building the Victim Server](labs/00.1-victim-server/) | Build an Ubuntu container with Filebeat, rsyslog, and OpenSSH as a monitored endpoint | Beginner |
 
